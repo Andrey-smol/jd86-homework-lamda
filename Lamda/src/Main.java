@@ -12,5 +12,13 @@ public class Main {
         }catch (ArithmeticException e){
             System.out.println(e.getMessage());
         }
+
+        //задача 2: Работяга
+        OnTaskDoneListener listener = System.out::println;
+        Worker worker = new Worker(listener);
+        worker.start();
+
+        Worker w = new Worker(s-> System.out.println(s + ". Вы хорошо поработали"));
+        w.start();
     }
 }
