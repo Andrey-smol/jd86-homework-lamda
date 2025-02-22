@@ -39,6 +39,15 @@ int c = calc.devide.apply(a, b);
 ```java
 calc.println.accept(c);
 
+##Коментарий
+При выполнении код вылетит с ошибкой делении на ноль. Можно обработать исключение try{}catch(){}, или проверять на корретность передаваемых данных, или можно
+BinaryOperator<Integer> devide = (x, y) -> {
+    if(y = 0){
+        throw new ArithmeticException("Вы пытаетесь разделить на ноль");
+    }
+    return x / y;
+}
+
 
 
 
