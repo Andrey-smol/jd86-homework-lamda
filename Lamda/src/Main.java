@@ -9,7 +9,7 @@ public class Main {
             int b = calc.minus.apply(1, 1);
             int c = calc.devide.apply(a, b);
             calc.println.accept(c);
-        }catch (ArithmeticException e){
+        } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
         }
 
@@ -18,7 +18,7 @@ public class Main {
         Worker worker = new Worker(listener);
         worker.start();
 
-        Worker w = new Worker(s-> System.out.println(s + ". Вы хорошо поработали"));
+        Worker w = new Worker(s -> System.out.println(s + ". Вы хорошо поработали"));
         w.start();
     }
 }
